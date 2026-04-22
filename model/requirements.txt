@@ -1,0 +1,8 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.12
+# Full OpenCV: ultralytics patches use cv2.imshow (missing in headless). Pin <4.10 for numpy 1.26 + torch 2.2.
+opencv-python>=4.8.0,<4.10.0
+ultralytics>=8.3.0
+# PyTorch 2.2 wheels are built against NumPy 1.x; NumPy 2 breaks import.
+numpy>=1.26.0,<2.0

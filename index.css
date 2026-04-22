@@ -1,0 +1,73 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hide native cursor when custom cursor mode is active. */
+html.pashu-custom-cursor body {
+  cursor: none;
+}
+
+html.pashu-custom-cursor a,
+html.pashu-custom-cursor button,
+html.pashu-custom-cursor input,
+html.pashu-custom-cursor select,
+html.pashu-custom-cursor textarea,
+html.pashu-custom-cursor [role="button"] {
+  cursor: none !important;
+}
+
+/* Custom Scrollbar for glass feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.8);
+}
+
+@keyframes scan {
+  from {
+    background-position: 0 -100px;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-scan,
+  .animate-pulse-slow {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

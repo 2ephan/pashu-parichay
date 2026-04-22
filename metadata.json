@@ -1,0 +1,10 @@
+{
+  "name": "PashuParichay - AI Cattle Breed Recognition",
+  "description": "A Smart India Hackathon project concept for identifying Indian cattle and buffalo breeds using deep learning, powered by Gemini for demonstration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
