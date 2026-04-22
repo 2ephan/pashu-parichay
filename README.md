@@ -97,7 +97,7 @@ Add/replace images under [`public/docs/screenshots/`](public/docs/screenshots/) 
 The Python server expects **`model/best.pt`** next to `model/server.py`.
 
 - If `model/best.pt` is already present in your local copy, YOLO is ready.
-- If it is missing, copy your trained weight file (e.g. from `run_ultimate`) to **`model/best.pt`**, or set **`YOLO_WEIGHTS`** to an absolute path.
+- If it is missing, - Download it from here ([Model](https://drive.google.com/file/d/1GB99H1FhNYsniC97dfgEZ7OCI4a6mh53/view?usp=sharing)) since github file upload limit is only 100mb 
 
 Without weights, `python model/server.py` exits with a clear error.
 
